@@ -2,8 +2,8 @@ const kib = {
     id: 101,
     money: 5000,
     name: 'rj kibria',
-    treatDey: function(expense) {
-        this.money = this.money-expense;
+    treatDey: function(expense, tips, tax) {
+        this.money = this.money-expense-tips-tax;
         console.log('hi',this)
         return this.money;
     }
@@ -20,4 +20,7 @@ const normalGolam = {
     name: 'golam ali'
 }
 // call function 
-kib.treatDey.call(heroBalam, 500)
+kib.treatDey.call(heroBalam, 500, 100, 50)
+kib.treatDey.call(heroBalam, 300, 100, 30)
+kib.treatDey.apply(heroBalam, [1000, 100, 30])
+kib.treatDey.apply(normalGolam, [800, 80, 80])
