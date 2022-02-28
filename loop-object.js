@@ -22,7 +22,7 @@ for(const prop of keys) {
 }
 // use entries and for of to create loop
 const entries = Object.entries(bodna);
-console.log(entries)
+console.log(entries);
 for(const [key, value] of Object.entries(bodna)){
     console.log(key, value);
 }
